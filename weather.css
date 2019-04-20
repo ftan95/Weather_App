@@ -1,0 +1,180 @@
+
+body {
+    min-height: 100vh;  /* needed to make sure body fills up window */
+	/*  Choose a font stack. A browser uses the first 
+	    font in the stack that it has.  */
+	/* the whole body is a flexbox container */
+	display: flex;
+    flex-direction: column;  /* stack items inside vertically */ 
+    justify-content: flex-start;
+}
+
+#Upper {
+    background-image: linear-gradient(rgb(73, 138, 220), rgb(98, 59, 156));
+}
+
+#h1 {
+    color: white;
+    font-size: 3.5vw;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-left: 100px;
+    margin-right: 0px;
+    margin-top: 70px;
+    margin-bottom: 0px;
+}
+
+#h2 {
+    color: rgb(14, 66, 131);
+    font-size: 2.5vw;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-left: 100px;
+    margin-right: 0px;
+}
+
+#map {
+    float: right;
+    position: relative;
+    clip-path: circle(40%);
+    margin-top: 40px;
+    margin-bottom: 0px;
+    width: 30%;
+    margin-right: 100px;
+    margin-left: 0px;
+}
+
+img.base {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
+
+#colors {
+    position: absolute;
+    width: 70%;
+    top: 0;
+    left: 0;
+    margin-left: 50px;
+    margin-right: 0px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+#cities {
+    position: absolute;
+    width: 80%;
+    top: 0;
+    left: 0;
+    margin-left: 35px;
+    margin-right: 0px;
+    margin-top: 57px;
+    margin-bottom: 0px;
+}
+
+img.names {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
+
+#search {
+    font-size: 1.5vw;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-left: 100px;
+    margin-right: 0px;
+    color: white;
+    height: 50px;
+}
+
+#searchtxt {
+    background-color: rgb(46, 46, 129);
+    height: 25px;
+    margin-left: 20px;
+    margin-right: 0px;
+    color: white;
+}
+
+#submit {
+    background-color: rgb(130, 145, 214);
+    height: 30px;
+    width: 70px;
+    color: white;
+    border: none;
+    font-size: 12px;
+}
+
+#showTemp {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Saira Extra Condensed Light', sans-serif;
+    color: white;
+    margin-left: 140px;
+    margin-right: 0px;
+}
+
+#showTime {
+    display: flex;
+    flex-direction: column;
+}
+
+#current {
+    font-size: 1.5vw;
+}
+
+#time {
+    font-size: 1.5vw;
+}
+
+#imagesize {
+    width: 25%;
+    margin-left: 50px;
+    margin-right: 0px;
+}
+
+#image {
+    margin-left: 30px;
+    margin-right: 0px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
+
+#temperature {
+    font-size: 4.5vw;
+    margin-left: 50px;
+    margin-right: 0px;
+}
+
+#Lower {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(223, 223, 223));
+}
+
+.Hour {
+    display: flex;
+    flex-direction: column;
+    padding-left: 85px;
+    padding-right: 85px;
+    
+}
+
+.txttime {
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.temp {
+    font-size: 4vw;
+    text-align: center;
+}
+
+#fifhour {
+    display: flex;
+    flex-direction: column;
+    padding-left: 85px;
+    padding-right: 85px;
+}
+

@@ -1,0 +1,75 @@
+<!doctype HTML>
+<html lang="en">
+
+  <head>
+	  <title>Weather</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="weather.css">
+  </head>
+
+  <body>
+		<div id = "Upper">
+             <div id = "map">
+                <img src = "DAX_Topo_Short.jpg" alt = "topo" class = "base" height="250" width="400">
+                <div id = "colors">
+                   
+                </div>
+                <div id = "cities">
+                    <img src = "DAX_City_Short.gif" alt = "city" class = "names" height="200" width="350">
+                </div>
+            </div>
+            <p id = "h1">Local Weather Six Hour Forecast</p>
+            <p id = "h2">Northern California with doppler radar</p>      
+            <div id = "search">
+                <p>Forcast for   
+                  <input type="text" placeholder="  Davis, CA" id = "searchtxt" size = "45">
+                  <input type="submit" value="submit" id="submit"  onclick="makeCorsRequest()">
+                </p>
+            </div>
+            <div id = "showTemp">
+              <div id = "showTime">
+                  <p id = "current">current</p>
+                  <p id = "time"></p>
+              </div>
+              <div id = "imagesize">
+                  <img src="" alt = "clear" id = "image">
+                </div>
+              <p id = "temperature"></p>
+            </div>
+      </div>
+      <div id = "Lower">
+        <div id = "firsthour" class = "Hour">
+          <p id = "firsttime" class = "txttime"></p>
+          <img src = "" id = "firstimage" class = "cssimage">
+          <p id = "firsttemp" class = "temp"></p>
+        </div>
+        <hr>
+        <div id = "secondhour" class = "Hour">
+            <p id = "secondtime" class = "txttime"></p>
+            <img src = "" id = "secondimage" class = "cssimage">
+            <p id = "secondtemp" class = "temp"></p>
+        </div>
+        <hr>
+        <div id = "thour" class = "Hour">
+            <p id = "ttime" class = "txttime"></p>
+            <img src = "" id = "timage" class = "cssimage">
+            <p id = "ttemp" class = "temp"></p>
+        </div>
+        <hr>
+        <div id = "fhour" class = "Hour">
+            <p id = "ftime" class = "txttime"></p>
+            <img src = "" id = "fimage" class = "cssimage">
+            <p id = "ftemp" class = "temp"></p>
+        </div>
+        <hr>
+        <div id = "fifhour">
+            <p id = "fiftime" class = "txttime"></p>
+            <img src = "" id = "fifimage" class = "cssimage">
+            <p id = "fiftemp" class = "temp"></p>
+        </div>
+      </div>
+        <script src="weather.js"></script>
+  </body>
+</html>

@@ -13,15 +13,15 @@ function createCORSRequest(method, url) {
 
 function makeCorsRequest() {
   let searchInput = document.getElementById("searchtxt");
-  let input = ""
-  if (searchInput.value === "") {
-    input = "Davis,CA,US"
+  let input = "";
+  if (searchInput.value == "") {
+    input = "Davis,CA,US";
   } else {
-    input = searchInput.value
+    input = searchInput.value;
   }
 let url = "http://api.openweathermap.org/data/2.5/forecast/hourly?q=" + input + "&units=imperial&APPID=df9019acb167004a5c44f2bb777e9b2b"
 let xhr = createCORSRequest('GET', url);
-      
+
   // checking if browser does CORS
   if (!xhr) {
     alert('CORS not supported');
@@ -30,8 +30,8 @@ let xhr = createCORSRequest('GET', url);
 
   // Load some functions into response handlers.
   xhr.onload = function() {
- 
-      let responseStr = xhr.responseText;  // get the JSON string 
+
+      let responseStr = xhr.responseText;  // get the JSON string
       let object = JSON.parse(responseStr);  // turn it into an object
       if (object.city.coord.lon > "-121.351" || object.city.coord.lon < "-123.279") {
         xhr.onerror = alert("Not Found");
@@ -59,14 +59,14 @@ let xhr = createCORSRequest('GET', url);
 
         if (object.list[0].weather[0].icon === "01n") {
           img.src = "./assets/clear-night.svg";
-        } 
+        }
         if (object.list[0].weather[0].icon === "01d") {
           img.src = "./assets/clearsky.svg";
         }
 
         if (object.list[0].weather[0].icon === "02n") {
           img.src = "./assets/fewclouds-night.svg";
-        } 
+        }
         if (object.list[0].weather[0].icon === "02d") {
           img.src = "./assets/fewclouds-day.svg";
         }
@@ -82,7 +82,7 @@ let xhr = createCORSRequest('GET', url);
       }
         if (object.list[0].weather[0].icon === "10n") {
           img.src = "./assets/rain-night.svg";
-        } 
+        }
         if (object.list[0].weather[0].icon === "10d") {
         img.src = "./assets/rain-day.svg";
         }
@@ -109,14 +109,14 @@ let xhr = createCORSRequest('GET', url);
       var fimg = document.getElementById("firstimage");
       if (object.list[1].weather[0].icon === "01n") {
         fimg.src = "./assets/clear-night.svg";
-      } 
+      }
       if (object.list[1].weather[0].icon === "01d") {
         fimg.src = "./assets/clearsky.svg";
       }
 
       if (object.list[1].weather[0].icon === "02n") {
         fimg.src = "./assets/fewclouds-night.svg";
-      } 
+      }
       if (object.list[1].weather[0].icon === "02d") {
         fimg.src = "./assets/fewclouds-day.svg";
       }
@@ -132,7 +132,7 @@ let xhr = createCORSRequest('GET', url);
     }
       if (object.list[1].weather[0].icon === "10n") {
         fimg.src = "./assets/rain-night.svg";
-      } 
+      }
       if (object.list[1].weather[0].icon === "10d") {
       fimg.src = "./assets/rain-day.svg";
       }
@@ -146,7 +146,7 @@ let xhr = createCORSRequest('GET', url);
       fimg.src = "./assets/mist.svg";
     }
 
-//-------------------2nd hour------------------ 
+//-------------------2nd hour------------------
 let stime = document.getElementById("secondtime");
       var time2 = dt.getHours() + 2;
       if (time2 > 12) {
@@ -161,14 +161,14 @@ let stime = document.getElementById("secondtime");
       var simg = document.getElementById("secondimage");
       if (object.list[2].weather[0].icon === "01n") {
         simg.src = "./assets/clear-night.svg";
-      } 
+      }
       if (object.list[2].weather[0].icon === "01d") {
         simg.src = "./assets/clearsky.svg";
       }
 
       if (object.list[2].weather[0].icon === "02n") {
         simg.src = "./assets/fewclouds-night.svg";
-      } 
+      }
       if (object.list[2].weather[0].icon === "02d") {
         simg.src = "./assets/fewclouds-day.svg";
       }
@@ -184,7 +184,7 @@ let stime = document.getElementById("secondtime");
     }
       if (object.list[2].weather[0].icon === "10n") {
         simg.src = "./assets/rain-night.svg";
-      } 
+      }
       if (object.list[2].weather[0].icon === "10d") {
       simg.src = "./assets/rain-day.svg";
       }
@@ -198,7 +198,7 @@ let stime = document.getElementById("secondtime");
       simg.src = "./assets/mist.svg";
     }
 
-//-------------------3rd hour------------------    
+//-------------------3rd hour------------------
 let tritime = document.getElementById("ttime");
 var time3 = dt.getHours() + 3;
 if (time3 > 12) {
@@ -213,14 +213,14 @@ third.textContent = Math.round(object.list[3].main.temp) + "°";
       var timg = document.getElementById("timage");
       if (object.list[3].weather[0].icon === "01n") {
         timg.src = "./assets/clear-night.svg";
-      } 
+      }
       if (object.list[3].weather[0].icon === "01d") {
         timg.src = "./assets/clearsky.svg";
       }
 
       if (object.list[3].weather[0].icon === "02n") {
         timg.src = "./assets/fewclouds-night.svg";
-      } 
+      }
       if (object.list[3].weather[0].icon === "02d") {
         timg.src = "./assets/fewclouds-day.svg";
       }
@@ -236,7 +236,7 @@ third.textContent = Math.round(object.list[3].main.temp) + "°";
     }
       if (object.list[3].weather[0].icon === "10n") {
         timg.src = "./assets/rain-night.svg";
-      } 
+      }
       if (object.list[3].weather[0].icon === "10d") {
       timg.src = "./assets/rain-day.svg";
       }
@@ -250,7 +250,7 @@ third.textContent = Math.round(object.list[3].main.temp) + "°";
       timg.src = "./assets/mist.svg";
     }
 
-//-------------------4th hour------------------ 
+//-------------------4th hour------------------
 let fourtime = document.getElementById("ftime");
 var time4 = dt.getHours() + 4;
 if (time4 > 12) {
@@ -265,14 +265,14 @@ fourth.textContent = Math.round(object.list[4].main.temp) + "°";
       var fourimg = document.getElementById("fimage");
       if (object.list[4].weather[0].icon === "01n") {
         fourimg.src = "./assets/clear-night.svg";
-      } 
+      }
       if (object.list[4].weather[0].icon === "01d") {
         fourimg.src = "./assets/clearsky.svg";
       }
 
       if (object.list[4].weather[0].icon === "02n") {
         fourimg.src = "./assets/fewclouds-night.svg";
-      } 
+      }
       if (object.list[4].weather[0].icon === "02d") {
         fourimg.src = "./assets/fewclouds-day.svg";
       }
@@ -288,7 +288,7 @@ fourth.textContent = Math.round(object.list[4].main.temp) + "°";
     }
       if (object.list[4].weather[0].icon === "10n") {
         fourimg.src = "./assets/rain-night.svg";
-      } 
+      }
       if (object.list[4].weather[0].icon === "10d") {
       fourimg.src = "./assets/rain-day.svg";
       }
@@ -302,7 +302,7 @@ fourth.textContent = Math.round(object.list[4].main.temp) + "°";
       fourimg.src = "./assets/mist.svg";
     }
 
-//-------------------5th hour------------------ 
+//-------------------5th hour------------------
 let fivetime = document.getElementById("fiftime");
 var time5 = dt.getHours() + 5;
 if (time5 > 12) {
@@ -317,14 +317,14 @@ fifth.textContent = Math.round(object.list[5].main.temp) + "°";
       var fifimg = document.getElementById("fifimage");
       if (object.list[5].weather[0].icon === "01n") {
         fifimg.src = "./assets/clear-night.svg";
-      } 
+      }
       if (object.list[5].weather[0].icon === "01d") {
         fifimg.src = "./assets/clearsky.svg";
       }
 
       if (object.list[5].weather[0].icon === "02n") {
         fifimg.src = "./assets/fewclouds-night.svg";
-      } 
+      }
       if (object.list[5].weather[0].icon === "02d") {
         fifimg.src = "./assets/fewclouds-day.svg";
       }
@@ -340,7 +340,7 @@ fifth.textContent = Math.round(object.list[5].main.temp) + "°";
     }
       if (object.list[5].weather[0].icon === "10n") {
         fifimg.src = "./assets/rain-night.svg";
-      } 
+      }
       if (object.list[5].weather[0].icon === "10d") {
       fifimg.src = "./assets/rain-day.svg";
       }
@@ -362,12 +362,12 @@ fifth.textContent = Math.round(object.list[5].main.temp) + "°";
   // Actually send request to server
   xhr.send();
 }
-   
-// run this code to make request when this script file gets executed 
+
+// run this code to make request when this script file gets executed
 makeCorsRequest();
 
 
-let imageArray = []  // global variable to hold stack of images for animation 
+let imageArray = []  // global variable to hold stack of images for animation
 let count = 0;          // global vars
 let img = document.getElementById("colors");
 var image = document.createElement('img');
@@ -389,16 +389,16 @@ function addToArray(newImage) {
     image.style.height = "auto";
     image.style.width = "auto";
     image.style.maxWidth = "100%";
-  
+
   function slideShow() {
     num = 1;
-    if(num != imageArray.length-1) { 
+    if(num != imageArray.length-1) {
       image = imageArray[num];
-      colors.appendChild(image)
+      colors.appendChild(image);
       num++;
     }else{
       num = 0;
-    } 
+    }
 
     image.style.display = "inline";
     image.style.height = "auto";
@@ -440,10 +440,3 @@ function getTenImages() {
 }
 
 getTenImages();
-
-
-
-
-
-
-

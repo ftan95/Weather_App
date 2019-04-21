@@ -11,34 +11,39 @@
 
   <body>
 		<div id = "Upper">
-             <div id = "map">
-                <img src = "DAX_Topo_Short.jpg" alt = "topo" class = "base" height="250" width="400">
-                <div id = "colors">
-                   
-                </div>
-                <div id = "cities">
-                    <img src = "DAX_City_Short.gif" alt = "city" class = "names" height="200" width="350">
-                </div>
-            </div>
+      <div id ="headers">
             <p id = "h1">Local Weather Six Hour Forecast</p>
-            <p id = "h2">Northern California with doppler radar</p>      
+            <p id = "h2">Northern California with doppler radar</p>
             <div id = "search">
-                <p>Forcast for   
-                  <input type="text" placeholder="  Davis, CA" id = "searchtxt" size = "45">
-                  <input type="submit" value="submit" id="submit"  onclick="makeCorsRequest()">
+                <p>Forecast for
+                    <input type="text" placeholder="  Davis, CA" id = "searchtxt" size = "45">
+                    <input type="submit" value="submit" id="submit"  onclick="makeCorsRequest()">
                 </p>
             </div>
+          </div>
+          <div id = "iconMapTemp">
             <div id = "showTemp">
               <div id = "showTime">
                   <p id = "current">current</p>
                   <p id = "time"></p>
               </div>
-              <div id = "imagesize">
+              <div id = "pipe"></div>
+                <div id = "imagesize">
                   <img src="" alt = "clear" id = "image">
                 </div>
               <p id = "temperature"></p>
             </div>
+            <div id = "map">
+               <img src = "DAX_Topo_Short.jpg" alt = "topo" class = "base" height="250" width="400">
+               <div id = "colors">
+               </div>
+               <div id = "cities">
+                   <img src = "DAX_City_Short.gif" alt = "city" class = "names" height="200" width="350">
+               </div>
+           </div>
+         </div>
       </div>
+
       <div id = "Lower">
         <div id = "firsthour" class = "Hour">
           <p id = "firsttime" class = "txttime"></p>

@@ -389,10 +389,9 @@ function addToArray(newImage) {
     image.style.height = "auto";
     image.style.width = "auto";
     image.style.maxWidth = "100%";
-
+num = 1;
   function slideShow() {
-    num = 1;
-    if(num != imageArray.length-1) {
+    if(num != imageArray.length) {
       image = imageArray[num];
       colors.appendChild(image);
       num++;
@@ -405,7 +404,7 @@ function addToArray(newImage) {
     image.style.width = "auto";
     image.style.maxWidth = "100%";
   }
-setInterval(slideShow,600000)
+setInterval(slideShow,500)
 }
 
 

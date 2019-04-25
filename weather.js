@@ -440,3 +440,7 @@ function getTenImages() {
 }
 
 getTenImages();
+
+function swipeUp(){
+    document.getElementByClass('slideUp').className ='Lower';
+  }

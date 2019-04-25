@@ -1,4 +1,3 @@
-
 body {
     min-height: 100vh;  /* needed to make sure body fills up window */
 	/*  Choose a font stack. A browser uses the first
@@ -33,17 +32,6 @@ body {
     margin-right: 0px;
     margin-bottom: 25px;
 }
-/*
-#map {
-    float: right;
-    position: relative;
-    clip-path: circle(40%);
-    margin-top: 40px;
-    margin-bottom: 0px;
-    width: 30%;
-    margin-right: 100px;
-    margin-left: 0px;
-}*/
 
 #map {
     float: right;
@@ -137,17 +125,20 @@ img.names {
 }
 
 #current {
-    font-size: 30px;
+    font-size: 2em;
+    font-weight: lighter;
 }
 
 #time {
-    font-size: 30px;
+    font-size: 2em;
+    font-weight: lighter;
 }
 
 #imagesize {
     width: 15%;
-    margin-left: 50px;
-    margin-right: 0px;
+    margin-left: 3%;
+    margin-right: 0%;
+    margin-bottom: 3%;
 }
 
 #image {
@@ -158,10 +149,11 @@ img.names {
 }
 
 #temperature {
-    font-size: 60px;
+    font-size: 4em;
     margin-top: 60px;
     margin-left: 50px;
     margin-right: 0px;
+    font-weight: lighter;
 }
 
 #Lower {
@@ -175,8 +167,8 @@ img.names {
 .Hour {
     display: flex;
     flex-direction: column;
-    padding-left: 85px;
-    padding-right: 85px;
+    padding-left: 5%;
+    padding-right: 5%;
 
 }
 
@@ -189,16 +181,15 @@ img.names {
 .temp {
     font-size: 4vw;
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 20%;
 }
 
 #fifhour {
     display: flex;
     flex-direction: column;
-    padding-left: 85px;
-    padding-right: 85px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
-
 
 /*********************************************************************/
 /****************************Tablet View******************************/
@@ -206,92 +197,103 @@ img.names {
 @media (max-width: 1024px){
   body {
     min-width: 100vh;
-    background-color: #F09A9D;
-  }
-  #Upper {
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    flex: auto;
-    display: inline;
-    justify-content: center;
-    flex-grow: 2;
   }
+
+  #Upper {
+    position: relative
+    min-height: 60vh;
+    flex: 1;
+  }
+
+  #Lower {
+    flex: 1;
+  }
+
   #headers {
     display: flex;
     flex-direction: column;
   }
-  #iconMapTemp {
-    position: relative;
 
-  }
-  #showTemp {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-  }
-  #image {
-    width: 20%;
-    /*order: 1;*/
+  #imagesize {
     position: absolute;
-    left: 0;
-    margin-left: 100px;
+    width: 25%;
+    margin-bottom: 50%;
+    top: 35%;
   }
-  #showTime {
-    float: left;
-    /*order: 2;*/
-  }
-  #pipe {
-    border-left: 2px solid black;
-    height: 60px;
-    /*order: 3;*/
-    opacity: .35;
-    float: left;
-    margin-left: 30px;
-    margin-top: 60px;
-  }
-  #temperature{
-    /*order: 4;*/
-    float: left;
-    margin-left: -15vw;
-  }
+
   #map {
-    clip-path: circle(40%);
-    position: absolute;
-    margin-top: 150px;
-    margin-bottom: 0px;
-    width: 30%;
+    min-width: 40%;
+    margin-top: 25%;
+    margin-bottom: 0%;
+    margin-right: 10%;
   }
-  .layer {
-    background-color: thistle;
-    display: flex;
-    position: absolute;
-    left: 0;
-    justify-content: space-between;
-  }
-  #Lower {
-    flex-grow: 1;
-  }
+
   #h1 {
-      font-size: 6vw;
-      margin-left: 150px;
-      margin-right: 0px;
-      margin-top: 70px;
-      margin-bottom: 10px;
+    font-size: 3em;
+    margin-top: 5%;
+    /*white-space: nowrap;*/
   }
 
   #h2 {
-      font-size: 5vw;
-      margin-left: 170px;
-      margin-right: 0px;
-      margin-bottom: 25px;
+    font-size: 2.4em;
+    margin-left: 15%;
+
   }
   #search {
-      font-size: 3vw;
-      margin-left: 200px;
-      margin-right: 0px;
-      color: white;
-      height: 50px;
+    font-size: 1.2em;
+    margin-left: 20%;
+    margin-bottom: 10%;
+  }
+  #showTemp {
+
+  }
+  #showTime {
+    margin-top: 20%;
+  }
+
+  #current {
+    font-size: 1em;
+    transform: scale(1.5,2.5);
+    margin-top: 60%;
+    margin-left: 100%;
+    margin-bottom: 20%;
+    font-weight: lighter;
+  }
+  #time {
+    font-size: 1em;
+    transform: scale(1.5,2.5);
+    margin-top: 40%;
+    margin-left: 110%;
+    font-weight: lighter;
+  }
+
+  #temperature{
+    font-size: 3.7em;
+    margin-top: 25%;
+    margin-left: 3%;
+    transform: scale(1,1.5);
+    font-weight: lighter;
+  }
+
+  #pipe {
+    border-left: 2px solid black;
+    height: 75px;
+    opacity: .35;
+    float: left;
+    margin-left: 13%;
+    margin-top: 23%;
+  }
+
+  .temp {
+    font-size: 2em;
+    transform: scale(1.5,2.5);
+    font-weight: lighter;
+  }
+  .txttime {
+    transform: scale(1,1.5);
+    font-weight: lighter;
   }
 }
 
@@ -301,33 +303,39 @@ img.names {
 /*********************************************************************/
 @media (max-width: 767px){
   body {
-      min-height: 100vh;
-      background-color: #B2D6FF;
-  }
+      max-width: 100vw;
+      height: 100vh;
+    }
   #Upper {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 120%;
-    flex-grow: 1;
-    height: 170vh;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #imagesize {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    margin-left: 30%;
+    margin-top: 40%;
   }
   #showTemp{
     display: flex;
-    flex-direction: row;
+
   }
   #showTime {
-    font-size: 5em;
+    font-size: 2em;
+    margin-top: 70%;
+    margin-left: 0%;
   }
+
   #map {
     display: none;
   }
   #Lower {
       display: flex;
       flex-direction: column;
-      height: 170vh;
-      flex-grow: 1;
       justify-content: space-around;
+
   }
   #firsthour,
   #secondhour,
@@ -337,68 +345,103 @@ img.names {
     flex-direction: row;
     justify-content: space-around;
   }
-  .txttime {
-    font-size: 3em;
-    margin-top: 20px;
-    padding-top: 5px;
-  }
-  .temp {
-    font-size: 6em;
-    margin-top: 20px;
-    padding-top: 5px;
-  }
   #h1 {
-    font-size: 4.5em;
-    margin-left: 60px;
-    margin-right: 0px;
-    margin-top: 70px;
-    margin-bottom: 10px;
-    padding: 25px;
+    font-size: 4em;
+    margin-top: 15%;
+    margin-left: 10%;
+    flex-wrap: wrap;
   }
 
   #h2 {
-    font-size: 2.5em;
-    flex-wrap: wrap;
-    margin-left: 60px;
-    margin-right: 0px;
-    margin-bottom: 25px;
-    padding: 25px;
+    font-size: 2em;
+    margin-top: 5%;
+    margin-left: 10%;
+
   }
   #search {
-    display: flex;
     font-size: 3em;
-    margin-left: 20px;
-    margin-right: 0px;
-    color: white;
-    height: 50px;
-    flex-wrap: wrap;
-  }
-  #image {
-      margin-left: 30px;
-      margin-right: 0px;
-      margin-top: 15px;
-      margin-bottom: 30px;
-      max-width: 100%;
-  }
-  #current {
-      font-size: 1em;
+    margin-left: 20%;
+
   }
 
-  #time {
-      font-size: 1em;
+  #searchtxt {
+    height: 50px;
+    font-size: 1em;
+    width: 400px;
+    margin-left: 0%;
+  }
+
+  #submit {
+    height: 50px;
+    width: 150px;
+    color: white;
+    border: none;
+    font-size: .6em;
+
   }
   #pipe {
-    border-left: 2px solid black;
-    height: 150px;
-    opacity: .35;
-    float: left;
-    margin-left: 30px;
-    margin-top: 60px;
+    margin-top: 85%;
+    height: 130px;
+    margin-bottom: 20%;
+    margin-left: 30%;
   }
   #temperature {
-      font-size: 8em;
-      margin-top: 60px;
-      margin-left: 10px;
-      margin-right: 0px;
+    font-size: 7em;
+    margin-top: 85%;
+    margin-bottom: 20%;
   }
+  .txttime {
+    font-size: 3em;
+    margin-top: auto;
+  }
+  .temp {
+    font-size: 4.5em;
+    margin: 5%;
+  }
+  #firsttemp {
+    margin-top: 30%;
+  }
+
+  i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+
+  }
+
+  .up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  margin-left: 50%;
+  width: 50px;
+  height: 50px
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-left: 50%;
+    width: 50px;
+    height: 50px
+  }
+
+  .swipeUp{
+    animation-name: swipeUp;
+    animation-duration: 4s;
+  }
+  .swipeDown{
+    animation-name: swipeDown;
+    animation-duration: 4s;
+  }
+/*
+  @keyframes swipeUp {
+  from {top: 0%;}
+  to {top: 100%;}
+  }
+
+  @keyframes swipeDown {
+  from {top: 0px;}
+  to {top: 200px;}
+  }*/
 }

@@ -441,6 +441,7 @@ function getTenImages() {
 
 getTenImages();
 
-function swipeUp(){
-    document.getElementByClass('slideUp').className ='Lower';
+function slideUp(){
+    button = document.getElementById('Lower');
+    button.classList.add('displayClick');
   }

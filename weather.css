@@ -192,9 +192,9 @@ img.names {
 /*********************************************************************/
 /****************************Tablet View******************************/
 /*********************************************************************/
-@media (max-width: 1024px){
+@media (max-width: 920px){
   body {
-    min-width: 100vh;
+    min-width: 100vw;
     height: 100vh;
     display: flex;
   }
@@ -216,10 +216,8 @@ img.names {
 
   #imagesize {
     position: absolute;
-    width: 25%;
-    margin-bottom: 50%;
-    margin-left: 10%;
-    top: 25%;
+    width: 30%;
+    top: 20%;
   }
 
   #map {
@@ -230,33 +228,31 @@ img.names {
   }
 
   #h1 {
-    font-size: 3em;
+    font-size: 2.7em;
     margin-top: 5%;
-    /*white-space: nowrap;*/
+    margin-left: 5%;
   }
 
   #h2 {
-    font-size: 2.4em;
-    margin-left: 15%;
+    font-size: 2.2em;
+    margin-left: 5%;
 
   }
   #search {
     font-size: 1.2em;
-    margin-left: 20%;
+    margin-left: 10%;
     margin-bottom: 10%;
   }
   #showTemp {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10%;
 
-  }
-  #showTime {
-    margin-top: 20%;
   }
 
   #current {
     font-size: 1em;
     transform: scale(1.5,2.5);
-    margin-top: 60%;
-    margin-left: 100%;
     margin-bottom: 20%;
     font-weight: lighter;
   }
@@ -264,16 +260,14 @@ img.names {
     font-size: 1em;
     transform: scale(1.5,2.5);
     margin-top: 40%;
-    margin-left: 110%;
     font-weight: lighter;
   }
 
   #temperature{
     font-size: 3.7em;
-    margin-top: 25%;
-    margin-left: 3%;
     transform: scale(1,1.5);
     font-weight: lighter;
+    padding-top: 2%;
   }
 
   #pipe {
@@ -281,8 +275,8 @@ img.names {
     height: 75px;
     opacity: .35;
     float: left;
-    margin-left: 13%;
-    margin-top: 23%;
+    margin-left: 10%;
+    margin-top: 10%;
   }
 
   .temp {
@@ -296,165 +290,162 @@ img.names {
   }
 }
 
-
 /*********************************************************************/
 /****************************Mobile View******************************/
 /*********************************************************************/
-@media (max-width: 767px){
+@media (max-width: 600px){
   body {
       max-width: 100vw;
       height: 100vh;
-      position: relative;
+      overflow: hidden;
+      /*position: relative;*/
     }
-  #imagesize {
-    width: 50%;
-    position: absolute;
-    left: 0;
-    margin-left: 30%;
-    margin-top: 40%;
-  }
-  #showTemp{
-    display: flex;
 
-  }
-  #showTime {
-    font-size: 2em;
-    margin-top: 70%;
-    margin-left: 0%;
-  }
-
-  #map {
-    display: none;
-  }
-  #firsthour,
-  #secondhour,
-  #thour,
-  #fhour,
-  #fifhour {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  #h1 {
-    font-size: 4em;
-    margin-top: 15%;
-    margin-left: 10%;
-    flex-wrap: wrap;
-  }
-
-  #h2 {
-    font-size: 2em;
-    margin-top: 5%;
-    margin-left: 10%;
-
-  }
-  #search {
-    font-size: 3em;
-    margin-left: 20%;
-
-  }
-
-  #searchtxt {
-    height: 50px;
-    font-size: 1em;
-    width: 400px;
-    margin-left: 0%;
-  }
-
-  #submit {
-    height: 50px;
-    width: 150px;
-    color: white;
-    border: none;
-    font-size: .6em;
-
-  }
-  #pipe {
-    margin-top: 85%;
-    height: 130px;
-    margin-bottom: 20%;
-    margin-left: 30%;
-  }
-  #temperature {
-    font-size: 7em;
-    margin-top: 85%;
-    margin-bottom: 20%;
-  }
-  .txttime {
-    font-size: 3em;
-    margin-top: auto;
-  }
-  .temp {
-    font-size: 4.5em;
-    margin: 5%;
-  }
-  #firsttemp {
-    margin-top: 30%;
-  }
-
-/*not working*/
-  #h1 p span::before{
-    content: "\A";
-  }
-
-  i {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-
-  }
-  #Upper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  #Lower {
+    #Upper {
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      position: absolute;
-      top: 0%;
-      animation-duration: 10s;
-      animation-name: slideUp;
-      background-image: none;
-      background-color: white;
-  }
+    }
+    #Lower {
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-image: none;
+        background-color: white;
+    }
+    #firsthour,
+    #secondhour,
+    #thour,
+    #fhour,
+    #fifhour {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .cssimage{
+      width: 20%;
+    }
+    #h1 {
+      font-size: 2.5em;
+    }
+    #h2 {
+      font-size: 1.2em;
+    }
+    #search {
+      font-size: 2em;
+    }
 
-  .up {
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-  margin-left: 50%;
-  width: 50px;
-  height: 50px
-  }
+    #searchtxt {
+      height: 40%;
+      font-size: 1em;
+      width: 60%;
+      margin-left: 0%;
+    }
+    #headers {
+      margin-top: 10%;
+      padding: 5%;
+      display: flex;
+    }
 
-  .down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+    #submit {
+      height: 10%;
+      width: 20%;
+      color: white;
+      border: none;
+      font-size: .6em;
+
+    }
+    #imagesize {
+      width: 60%;
+      margin-top: 40%;
+    }
+    #showTemp{
+      margin-top: 10%;
+    }
+    #temperature {
+      margin-left: 5%;
+    }
+    #pipe {
+      margin-top: 25%;
+
+    }
+    #showTime {
+      font-size: 1em;
+    }
+    #map {
+      display: none;
+    }
+    .txttime {
+      font-size: 1.2em;
+      transform: scale(1,1.5);
+    }
+    .temp {
+      padding-bottom: 0%;
+      margin-top: 25%;
+      margin-right: 5%;
+    }
+    .Hour{
+      border-bottom: 1px solid grey;
+    }
+    i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    }
+
+    .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
     margin-left: 50%;
-    width: 50px;
-    height: 50px
-  }
-
-  .slideUp{
-    overflow:hidden;
-  }
-
-  .slideDown{
-
-  }
-
-  @keyframes slideUp {
-    from {
-      margin-top: 100%;
     }
-    to {
-      margin-top: 0%;
+
+    .down {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      margin-left: 50%;
     }
-  }
+
+    .displayClick{
+      animation-duration: 3s;
+      animation-name: slideUp;
+      display: flex;
+      position: absolute;
+      top: 0;
+    }
+
+    .displayUpper{
+      animation-duration: 3s;
+      animation-name: slideDown;
+      display: flex;
+      display: none;
+      position: absolute;
+      top: 100vh;
+    }
+    @keyframes slideUp {
+      from {
+        display: none;
+        position: absolute;
+        top: 100vh;
+      }
+      to {
+        display: flex;
+        position: absolute;
+        top: 0;
+      }
+    }
 /*
   @keyframes slideDown {
-  from {top: 0px;}
-  to {top: 200px;}
+  from {
+    display: flex;
+    position: absolute;
+    top: 0;
+  }
+  to {
+    display: none;
+    position: absolute;
+    top: 100vh;
+  }
   }*/
 }

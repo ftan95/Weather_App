@@ -404,7 +404,7 @@ num = 1;
     image.style.width = "auto";
     image.style.maxWidth = "100%";
   }
-setInterval(slideShow,8000)
+setInterval(slideShow,15000)
 }
 
 
